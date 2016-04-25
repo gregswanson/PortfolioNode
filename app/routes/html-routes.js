@@ -32,6 +32,11 @@ module.exports = function(app){
 		res.sendFile(path.join(__dirname + '/../public/crystal.html'));
 	});
 
+	app.get('/crystalgame', function(req, res){
+		//res.send("contact");
+		res.sendFile(path.join(__dirname + '/../public/crystalgame.html'));
+	});
+
 	// If no matching route is found default to home
 	app.use(function(req, res){
 		res.sendFile(path.join(__dirname + '/../public/index.html'));

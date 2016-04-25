@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/static/css/game.css">
+
+<link href='https://fonts.googleapis.com/css?family=Mouse+Memoirs|Lobster+Two|Slackey' rel='stylesheet' type='text/css'>
+
+	<title>Crystal Collector</title>
+</head>
+<body>
+<div class="container">
+
+<!-- title -->
+	<div class="row">
+		<div class="col-md-12 col-xs-12 text-center">
+			<h1>Crystal Collector</h1>
+		</div>
+	</div>
+
+	<!-- directions -->
+<div class="row">
+	<div class="col-md-12 col-xs-12 text-center">
+		<div class="col-md-12 col-xs-12 text-center my_popup_open" id="directions"><span class="glyphicon glyphicon-info-sign"></span> Directions</div>
+	</div>
+</div>
+
+<!-- wins and losses -->
+<div class="row winsLosses">
+	<div class="col-md-10 col-xs-12 col-md-offset-1 score">
+		<div class="col-md-6 col-xs-6 col-centered scoreBorder">
+			<div class="scoreWin">Wins:</div>
+			<div class="win" id="win">0</div>
+		</div>
+		<div class="col-md-6 col-xs-6 col-centered">
+			<div class="scoreLoss">Losses:</div>
+			<div class="loss" id="loss">0</div>
+		</div>
+	</div>
+</div>
+
+<!--computer score -->
+<div class="row">
+	<div class="col-md-4 col-md-offset-4 col-centered comp">
+			<div class="compScore">Computer Score</div>
+			<div class="compNum" id="compNum">0</div>
+		</div>
+</div>
+
+<!-- crystals -->
+<div class="row">
+	<div class="col-md-10 col-xs-12 col-md-offset-1 col-centered crystalBox">
+			<div class="col-md-3 col-xs-3 text-center">
+				<img class="crystalimg img-responsive" id ="crystalimg1" src="static/images/crystalimg1.png">
+			</div>
+		<div class="col-md-3 col-xs-3 text-center">
+				<img class="crystalimg img-responsive" id ="crystalimg2" src="static/images/crystalimg2.png">
+		</div>
+		<div class="col-md-3 col-xs-3 text-center">
+			<img class="crystalimg img-responsive" id ="crystalimg3" src="static/images/crystalimg3.png">				
+		</div>
+		<div class="col-md-3 col-xs-3 text-center">
+			<img class="crystalimg img-responsive" id ="crystalimg4" src="static/images/crystalimg4.png">
+		</div>
+	</div>
+</div>
+
+<!--Your score -->
+<div class="row">
+	<div class="col-md-4 col-md-offset-4 col-centered your">
+			<div class="yourScore">Your Score</div>
+			<div class="yourNum" id="yourNum">0</div>
+		</div>
+</div>
+
+
+
+
+</div>
+
+<!-- Audio -->
+<audio id="clickSound" preload="auto">
+    <source src="static/sounds/coin.mp3"></source>
+</audio>
+<audio id="winSound" preload="auto">
+    <source src="static/sounds/win.mp3"></source>
+</audio>
+<audio id="lossSound" preload="auto">
+    <source src="static/sounds/lose.mp3"></source>
+</audio>
+
+<!-- Add content to the popup -->
+  <div class="dirpop" id="my_popup">
+
+	<h2 class="dirhead">Directions</h2>
+		   <p class="dirbody">You will be given a random number at the start of the game.
+		There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+		</p>
+		<p class="dirbody">
+		You win the game by matching your total score to the random number. You lose the game if your score is higher than the random number.
+		</p>
+		<p class="dirbody">
+		The value of each crystal is hidden until you click on it.
+		</p>
+		<p class="dirbody">
+		Each time the game starts, the value of the crystal will change.
+		</p>
+
+    <!-- Add an optional button to close the popup -->
+    <button class="my_popup_close">Close</button>
+
+  </div>
+
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/static/javascript/game.js"></script>
+
+ <!-- jQuery Popup Overlay -->
+ <script src="https://cdn.rawgit.com/vast-engineering/jquery-popup-overlay/1.7.11/jquery.popupoverlay.js"></script>
+
+</body>
+</html>
