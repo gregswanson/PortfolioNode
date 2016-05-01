@@ -13,7 +13,7 @@ var path = require('path');
 
 // Creates an instance of "express server"
 var app = express();
-var PORT = 4000;
+var PORT = process.env.PORT || 3000;
 
 
 // Incorporate body-parser middleware
